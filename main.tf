@@ -20,7 +20,8 @@ resource "aws_key_pair" "minecraft_key" {
 }
 
 resource "aws_launch_configuration" "minecraft_lc" {
-  image_id      = "ami-0ff8a91507f77f867"
+ # image_id      = "ami-0ff8a91507f77f867"
+  image_id      = "ami-03a45a5ac837f33b7"
   instance_type = "t2.micro"
   security_groups = [aws_security_group.minecraft_sg.name]
   key_name          = aws_key_pair.minecraft_key.key_name
